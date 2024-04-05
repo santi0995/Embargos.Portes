@@ -1,4 +1,4 @@
-const selector = document.querySelector("#register");
+const selector = document.querySelector("#registerButton");
 selector.addEventListener("click", async () => {
   try {
     const data = {
@@ -10,8 +10,6 @@ selector.addEventListener("click", async () => {
       (data.lastName = document.querySelector("#lastName").value);
     document.querySelector("#photo").value &&
       (data.photo = document.querySelector("#photo").value);
-    document.querySelector("#age").value &&
-      (data.age = document.querySelector("#age").value);
     const opts = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

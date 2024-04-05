@@ -5,7 +5,7 @@ import moongosePaginate from "mongoose-paginate-v2";
 const collection = "orders";
 const schema = new Schema(
   {
-    product_id: { type: Types.ObjectId, required: true, ref: "products" },
+    product_id: { type: Types.ObjectId, required: true, ref: "portes" },
     user_id: { type: Types.ObjectId, required: true, ref: "users" },
     quantity: { type: Number, default: 1 },
     state: {

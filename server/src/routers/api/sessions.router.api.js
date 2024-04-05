@@ -55,7 +55,7 @@ class SessionsRouter extends CustomRouter {
     );
 
     //me
-    this.create("/", ["USER", "ADMIN", "PREM"], me);
+    this.create("/", ["USER", "ADMIN", "PREM"], passCallBackMid("jwt"),me);
 
     this.create("/signout", passCallBackMid("jwt"), signout);
 

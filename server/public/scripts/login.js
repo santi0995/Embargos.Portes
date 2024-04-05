@@ -13,8 +13,9 @@ selector.addEventListener("click", async () => {
     let response = await fetch("/api/sessions/login", opts);
     response = await response.json();
     if (response.statusCode === 200) {
-      location.replace("/");
-      alert(response.message);
+      console.log(response);
+      location.replace("/options");
+      alert(response.response);
     } else {
       const error = new Error("Wrong User or password");
       throw error;

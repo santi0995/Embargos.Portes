@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 
 import moongosePaginate from "mongoose-paginate-v2";
 
-const collection = "products";
+const collection = "portes";
 const schema = new Schema(
   {
     title: { type: String, required: true, index: true },

@@ -136,7 +136,7 @@ passport.use(
     },
     async (payload, done) => {
       try {
-        const user = await repository.readByEmail(payload.email);
+        const user = payload
         if (user) {
           user.password = null;
           return done(null, user);
