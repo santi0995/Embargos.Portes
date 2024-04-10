@@ -13,7 +13,6 @@ selector.addEventListener("click", async () => {
     let response = await fetch("/api/sessions/login", opts);
     response = await response.json();
     if (response.statusCode === 200) {
-      console.log(response);
       location.replace("/options");
       alert(response.response);
     } else {
